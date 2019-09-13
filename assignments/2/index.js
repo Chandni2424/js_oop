@@ -191,7 +191,7 @@ function userFactory(name, score) {
   user.type = "User";
   user.name = name;
   user.score = score;
-  return user;1
+  return user;
 }
 
 
@@ -200,13 +200,20 @@ var adminFunctionStore = Object.create(userFunctionStore);
 
 function adminFactory(name, score) {
   var obj = userFactory(name,score);
+  obj.type = "Admin";
+  Object.setPrototypeOf(obj, adminFunctionStore);
+  return obj;
 }
 
+
 var types = userFactory("a", 3);
-types.type = "Admin";
 
 
 var adminFromFactory = adminFactory("Eva", 5);
+
+adminFunctionStore.sharePublicMessage = function () {
+  console.log("Welcome Users !");
+};
 
 /********* Uncomment these lines to test your work! *********/
 adminFromFactory.sayType() // -> Logs "I am a Admin"
