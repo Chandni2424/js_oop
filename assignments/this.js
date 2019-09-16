@@ -57,7 +57,8 @@ myObject.someMethod = function() {
 };
 myObject.someMethod(); //Value Of This
 
-.....................................
+{someMethod: ƒ}
+
 
 // This refers to the New Instance
 
@@ -144,7 +145,6 @@ person.displayName.call(person2); // Output ??
 Name: Paul Adams
 
 // Guess the output of the following
-.....................................
 const a = {
   a: "a"
 };
@@ -167,17 +167,25 @@ This points towards the window
 // Output
 obj.getThis2();
 
+{getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
+
 // Output
 obj.getThis2.call(a);
 
+{a: "a"}
+
 // Output
 obj.getThis3();
+Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
 
 // Output
 obj.getThis3.call(a);
+Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
 
 // Output
 obj.getThis4();
+{getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
 
 // Output
 obj.getThis4.call(a);
+{getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
