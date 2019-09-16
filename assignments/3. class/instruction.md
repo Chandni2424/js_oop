@@ -2,7 +2,6 @@
 
 *[ ] Create a class BookList
 *[ ] Create another class called Book
-
 BookLists should have the following properties:
   1. Number of books marked as read
   2. Number of books marked not read yet
@@ -29,3 +28,4 @@ Every Booklist should have a few methods:
   * [ ] Change the last book read to be the book that just got finished
   * [ ] Change the current book to be the next book to be read
   * [ ] Change the next book to be read property to be the first unread book you find in the list of books
+
